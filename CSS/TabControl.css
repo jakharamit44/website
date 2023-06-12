@@ -1,0 +1,121 @@
+﻿:root {
+    --navbar-color: #fff;
+    --text-color: #000;
+    --bkg-color: #eee;
+    --tabset-background-color: #ddd;
+    --acordian-background-color: #f6f9fb;
+}
+
+.dark-mode {
+    --navbar-color: #15202b;
+    --text-color: #fff;
+    --bkg-color: #212e3a;
+    --tabset-background-color: whitesmoke;
+    --acordian-background-color: #203c57;
+}
+
+
+.space-tab{
+    height:10px;
+}
+
+.tabcontrol {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    top: 0;
+    width: 60%;
+    margin: auto;
+    /* z-index: 100; */
+    color: var(--text-color);
+    background-color: var(--navbar-color) !important;
+}
+
+.tabset {
+    margin: auto;
+}
+
+    .tabset > input[type="radio"] {
+        position: absolute;
+        left: -200vw;
+    }
+
+    .tabset .tab-panel {
+        display: none;
+    }
+
+    .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+    .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+    .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+    .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+    .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+    .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+        display: block;
+        padding-left: 10px
+    }
+
+
+
+.tabset > label {
+    position: relative;
+    
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tabset > label:hover{
+color: var(--text-color:);
+}
+
+
+
+
+.tabset > input:focus + label,
+.tabset > input:checked + label {
+    color: #0b0a0a;
+}
+
+    .tabset > label:hover::after,
+    .tabset > input:focus + label::after,
+    .tabset > input:checked + label::after {
+        background: #dddddd;
+    }
+
+    .tabset > input:checked + label {
+        margin-bottom: -1px;
+        background: var(--tabset-background-color);
+    }
+
+.tab-panel {
+    padding: 30px 0;
+    border-top: 2px solid #888;
+}
+
+.accordion {
+    max-width: 80%;
+    margin: auto;
+    color: var(--text-color);
+    background-color: var(--navbar-color) !important;
+}
+.accordion-item {
+    color: var(--text-color);
+    background-color: var(--acordian-background-color);
+}
+.accordion-button {
+    color: var(--text-color);
+    background-color: var(--navbar-color) !important;
+}
+
+@media (max-width: 992px) {
+    .tabnav {
+        display: none;
+    }
+}
+
+@media (min-width:992px) {
+    .accordion {
+        display: none;
+    }
+}
